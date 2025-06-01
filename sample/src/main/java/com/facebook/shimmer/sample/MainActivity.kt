@@ -16,7 +16,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.facebook.shimmer.Shimmer
 import com.facebook.shimmer.ShimmerFrameLayout
-import kotlinx.android.synthetic.main.main.*
+import com.facebook.shimmer.sample.databinding.MainBinding
 
 class MainActivity : Activity(), View.OnClickListener {
   private lateinit var shimmerViewContainer: ShimmerFrameLayout
@@ -26,17 +26,18 @@ class MainActivity : Activity(), View.OnClickListener {
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
-    setContentView(R.layout.main)
-    shimmerViewContainer = shimmer_view_container
+    val binding = MainBinding.inflate(layoutInflater)
+    setContentView(binding.root)
+    shimmerViewContainer = binding.shimmerViewContainer
     presetButtons =
         arrayOf(
-            preset_button0,
-            preset_button1,
-            preset_button2,
-            preset_button3,
-            preset_button4,
-            preset_button5,
-            preset_button6)
+          binding.presetButton0,
+          binding.presetButton1,
+          binding.presetButton2,
+          binding.presetButton3,
+          binding.presetButton4,
+          binding.presetButton5,
+          binding.presetButton6)
     presetButtons.forEach { it.setOnClickListener(this@MainActivity) }
     selectPreset(0, false)
   }

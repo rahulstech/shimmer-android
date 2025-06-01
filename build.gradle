@@ -7,22 +7,22 @@
  */
 
 buildscript {
-  apply from: rootProject.file('versions.gradle')
+
   repositories {
     mavenLocal()
-    jcenter()
+    mavenCentral()
     google()
   }
   dependencies {
-    classpath plugs.agp
-    classpath plugs.kotlin
+    classpath 'com.android.tools.build:gradle:8.6.1'
+    classpath 'org.jetbrains.kotlin:kotlin-gradle-plugin:1.9.24'
   }
 }
 
 allprojects {
   repositories {
     mavenLocal()
-    jcenter()
+    mavenCentral()
     google()
   }
 }

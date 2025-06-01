@@ -6,18 +6,20 @@
  * LICENSE file in the root directory of this source tree.
  */
 
-apply plugin: 'com.android.library'
+plugins {
+  id 'com.android.library'
+}
 
 android {
-  compileSdkVersion versions.compileSdk
+  namespace 'com.facebook.shimmer'
+  compileSdk 34
 
   defaultConfig {
-    minSdkVersion versions.minSdk
+    minSdk 21
+    targetSdk 34
   }
 }
 
 dependencies {
-  implementation deps.androidXAnnotations
+  implementation 'androidx.annotation:annotation:1.9.1'
 }
-
-apply from: rootProject.file('gradle/gradle-mvn-push.gradle')
