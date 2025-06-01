@@ -8,6 +8,7 @@
 
 plugins {
   id 'com.android.library'
+  id 'maven-publish'
 }
 
 android {
@@ -17,9 +18,42 @@ android {
   defaultConfig {
     minSdk 21
     targetSdk 34
+    version 1
+    versionName '1.0.0'
+  }
+
+  compileOptions {
+    sourceCompatibility JavaVersion.VERSION_1_8
+    targetCompatibility JavaVersion.VERSION_1_8
+  }
+
+  java {
+    toolchain {
+      languageVersion = JavaLanguageVersion.of(8)
+    }
+  }
+
+  publishing {
+    singleVariant('release') {
+      withSourcesJar()
+    }
   }
 }
 
 dependencies {
   implementation 'androidx.annotation:annotation:1.9.1'
 }
+
+afterEvaluate {
+  publishing {
+    publications {
+      create('shimmer-android', MavenPublication) {
+        from components.release
+        groupId = 'com.github.rahulstech'
+        artifactId = 'shimmer-android'
+        version = android.defaultConfig.versionName
+      }
+    }
+  }
+}
+
