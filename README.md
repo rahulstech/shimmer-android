@@ -13,6 +13,13 @@ Find more examples and usage instructions over at:
 
 [facebook.github.io/shimmer-android](http://facebook.github.io/shimmer-android)
 
+## Contribution By [rahulstech](https://github.com/rahulstech)
+
+1. Changed **minSdk** to **21** and **targetSdk** to **34**
+2. Changed **gradle** version to **8.7** and **Android Gradle Plugin** Version to **8.6.1**
+3. Updated dependencies compatible with min and target sdk version
+4. Use of ViewBinding for sample 
+
 ## License
 
 BSD License
