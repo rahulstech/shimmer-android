@@ -20,6 +20,26 @@ Find more examples and usage instructions over at:
 3. Updated dependencies compatible with min and target sdk version
 4. Use of ViewBinding for sample 
 
+## Installation Guide 
+
+1. in project level **build.gradle** file add the following line
+   ```groovy
+   repositories {
+      google()
+      mavenCentral()
+      maven { url 'https://jitpack.io' } // add this line
+   }
+   ```
+
+2. in module level **build.gradle** add the following line
+   ```groovy
+   dependencies {
+      implementation "com.github.rahulstech:shimmer-android:<latest version>"
+   }
+   ```
+
+3. now sync gradle
+
 ## License
 
 BSD License
