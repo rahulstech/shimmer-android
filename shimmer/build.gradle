@@ -13,13 +13,13 @@ plugins {
 
 android {
   namespace 'com.facebook.shimmer'
-  compileSdk 34
+  compileSdk 36
 
   defaultConfig {
     minSdk 21
-    targetSdk 34
-    version 1
-    versionName '1.0.0'
+    targetSdk 36
+    version 2
+    versionName '1.0.1'
   }
 
   compileOptions {

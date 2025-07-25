@@ -15,6 +15,10 @@ Find more examples and usage instructions over at:
 
 ## Contribution By [rahulstech](https://github.com/rahulstech)
 
+### v1.0.1
+1. Changed **compileSdk** and **targetSdk** to **36**
+2. 
+### v1.0.0
 1. Changed **minSdk** to **21** and **targetSdk** to **34**
 2. Changed **gradle** version to **8.7** and **Android Gradle Plugin** Version to **8.6.1**
 3. Updated dependencies compatible with min and target sdk version
